@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskMoEngage</string>
+
+    <string name="tv_lbl_author">Author: </string>
+    <string name="tv_lbl_source">Source: </string>
+    <string name="tv_lbl_description">Description: </string>
+
+    <string name="set_ui_text">%1$s %2$s</string>
+</resources>

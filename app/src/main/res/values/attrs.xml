@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PickerViewPager">
+        <attr name="items_visible" />
+    </declare-styleable>
+
+    <attr name="items_visible" format="enum">
+        <enum name="one" value="1" />
+        <enum name="three" value="3" />
+    </attr>
+
+</resources>
