@@ -60,7 +60,8 @@ class ViewPagerAdapter(
             newsClickInterface.newsClickListener(articleList!![position])
         }
 
-        if (position == 1) {
+        if (position == 0) {
+            mBinding.swipeToSeeMore.visibility = View.VISIBLE
             val animation = AnimationUtils.loadAnimation(
                 context,
                 R.anim.slide_up_anim
@@ -68,8 +69,10 @@ class ViewPagerAdapter(
             mBinding.swipeToSeeMore.startAnimation(
                 animation
             )
-        }
+        }else{
+            mBinding.swipeToSeeMore.visibility = View.GONE
 
+        }
 
         container.addView(mBinding.root, position)
         return mBinding.root

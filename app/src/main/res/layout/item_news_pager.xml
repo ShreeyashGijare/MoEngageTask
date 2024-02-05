@@ -105,6 +105,7 @@
 
 
             <com.google.android.material.textview.MaterialTextView
+                android:visibility="gone"
                 android:id="@+id/swipeToSeeMore"
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="wrap_content"
