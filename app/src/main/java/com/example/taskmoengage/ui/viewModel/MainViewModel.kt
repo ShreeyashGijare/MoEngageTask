@@ -48,9 +48,11 @@ class MainViewModel : BaseViewModel<UiState>() {
             is OrderType.OldestFirst -> {
                 newsList.sortedByDescending { Constants.convertStringToDate(it.publishedAt) }
             }
+
+            is OrderType.Title -> {
+                newsList.sortedByDescending { it.title }
+            }
         }
         return newsList
     }
-
-
 }

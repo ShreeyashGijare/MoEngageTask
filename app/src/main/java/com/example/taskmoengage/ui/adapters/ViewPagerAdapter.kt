@@ -48,9 +48,9 @@ class ViewPagerAdapter(
             articleList!![position].description
         )
 
-        mBinding.root.setOnClickListener {
+        /*mBinding.root.setOnClickListener {
             newsClickInterface.newsClickListener(articleList!![position])
-        }
+        }*/
 
         container.addView(mBinding.root, position)
         return mBinding.root

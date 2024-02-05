@@ -6,4 +6,6 @@
     <string name="tv_lbl_description">Description: </string>
 
     <string name="set_ui_text">%1$s %2$s</string>
+    <string name="new_to_old">New-to-Old</string>
+    <string name="old_to_new">Old-to-New</string>
 </resources>

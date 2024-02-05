@@ -6,34 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.activities.MainActivity">
 
-    <RadioGroup
-        android:id="@+id/rgNewsOrder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/rbLatestFirst"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="Latest News" />
-
-        <RadioButton
-            android:id="@+id/rbOldestFirst"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="Oldest News" />
-
-    </RadioGroup>
-
     <ImageView
         android:id="@+id/ivProgressBar"
         android:layout_width="@dimen/margin_70"
@@ -43,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rgNewsOrder" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.taskmoengage.widgets.CustomVerticalViewPager
         android:id="@+id/newsViewPager"
@@ -52,6 +24,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rgNewsOrder" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFilter"
+        style="?attr/floatingActionButtonPrimaryStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

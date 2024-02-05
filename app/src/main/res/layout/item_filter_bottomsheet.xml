@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Material3.CardView.Outlined"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/margin_10"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/margin_10"
+        android:paddingVertical="@dimen/margin_10"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:background="@drawable/circle_blue_border_background"
+            android:padding="@dimen/margin_10"
+            android:src="@drawable/ic_filter" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvFilterType"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/size_20"
+            android:layout_weight="0.3"
+            android:gravity="start" />
+
+        <ImageView
+            android:id="@+id/ivSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:src="@drawable/ic_selected"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

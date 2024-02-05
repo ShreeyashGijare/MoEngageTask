@@ -35,7 +35,6 @@ class CustomVerticalViewPager @JvmOverloads constructor(
                     resources.getValue(R.dimen.three_items, threeValue, true)
                     threeValue.float
                 }
-
                 else -> 3f
             }
             array.recycle()
