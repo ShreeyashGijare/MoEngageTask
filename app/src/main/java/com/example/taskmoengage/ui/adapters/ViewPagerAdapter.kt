@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import com.example.taskmoengage.R
@@ -55,9 +56,20 @@ class ViewPagerAdapter(
             articleList!![position].description
         )
 
-        mBinding.root.setOnClickListener {
+        mBinding.btnSeeMoreDetails.setOnClickListener {
             newsClickInterface.newsClickListener(articleList!![position])
         }
+
+        if (position == 1) {
+            val animation = AnimationUtils.loadAnimation(
+                context,
+                R.anim.slide_up_anim
+            )
+            mBinding.swipeToSeeMore.startAnimation(
+                animation
+            )
+        }
+
 
         container.addView(mBinding.root, position)
         return mBinding.root

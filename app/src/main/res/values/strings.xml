@@ -8,4 +8,6 @@
     <string name="set_ui_text">%1$s %2$s</string>
     <string name="new_to_old">New-to-Old</string>
     <string name="old_to_new">Old-to-New</string>
+    <string name="see_more">See More</string>
+    <string name="swipe_up_to_see_more_news">Swipe up to see more news</string>
 </resources>
