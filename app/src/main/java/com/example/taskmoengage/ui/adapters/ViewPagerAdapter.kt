@@ -32,11 +32,18 @@ class ViewPagerAdapter(
             .into(mBinding.ivArticleImage)
 
         mBinding.tvArticleTitle.text = articleList!![position].title
-        mBinding.tvArticleAuthor.text = context.getString(
-            R.string.set_ui_text,
-            context.getString(R.string.tv_lbl_author),
-            articleList!![position].author
-        )
+
+        if (articleList!![position].author.isNullOrEmpty()) {
+            mBinding.tvArticleAuthor.visibility = View.GONE
+        } else {
+            mBinding.tvArticleAuthor.text = context.getString(
+                R.string.set_ui_text,
+                context.getString(R.string.tv_lbl_author),
+                articleList!![position].author
+            )
+        }
+
+
         mBinding.tvArticleSource.text = context.getString(
             R.string.set_ui_text,
             context.getString(R.string.tv_lbl_source),
@@ -48,9 +55,9 @@ class ViewPagerAdapter(
             articleList!![position].description
         )
 
-        /*mBinding.root.setOnClickListener {
+        mBinding.root.setOnClickListener {
             newsClickInterface.newsClickListener(articleList!![position])
-        }*/
+        }
 
         container.addView(mBinding.root, position)
         return mBinding.root
